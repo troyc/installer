@@ -514,7 +514,9 @@ partition_in_list()
 #------------------------------------------------------------------------------
 
 scan_partitions
-get_partition_mode
+#Preserving partitions is currently not supported, so always use erase-entire-disk.
+#get_partition_mode
+PARTITION_MODE=erase-entire-disk
 write_partition_conf
 
 exit ${Continue}
